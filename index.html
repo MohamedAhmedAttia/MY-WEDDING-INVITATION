@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Icon.png">
+    <title>Invitation</title>
+</head>
+<body>
+
+    <!-- Code entry box -->
+    <div class="overlay" id="overlay">
+        <div class="code-box">
+            <label for="codeInput">Please enter the code that was given to you via WhatsApp</label>
+            <input type="text" id="codeInput" autocomplete="off" />
+            <button id="enterBtn">Enter</button>
+        </div>
+    </div>
+
+    <!-- Main content, hidden until a code is submitted -->
+    <div class="container hidden" id="container">
+        <h1 class="welcome" id="result"></h1>
+        <h2 class="welcome welcome2" id="second">Are you free on Friday, 25th of December?</h2>
+        <h2 class="welcome welcome2" id="third">If not, please free yourself...</h2>
+        <h2 class="welcome welcome2" id="fourth">Because we are honoured to invite you to our wedding</h2>
+        <div class="welcome invitation-wrapper" id="invitation">
+            <div class="invitation-card" id="invitationCard">
+                <img class="card-face card-cover" src="Invitation_Cover.jpeg" alt="Invitation Cover">
+                <img class="card-face card-back" src="Invitation_Card.jpeg" alt="Wedding Invitation Card">
+                
+                <!-- Clickable location link overlay over ELMOSHIR TANTAWY MOSQUE, ELRAWDA HALL -->
+                <a href="https://maps.app.goo.gl/wrw6cSnLU4FAa2D78?g_st=ic" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="location-link" 
+                   title="View location on Google Maps"></a>
+            </div>
+            <div class="countdown" id="countdown">
+                <div class="countdown-unit" id="cdDaysUnit">
+                    <span class="countdown-value" id="cdDaysValue">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <span class="countdown-sep" id="cdSep1">:</span>
+                <div class="countdown-unit" id="cdHoursUnit">
+                    <span class="countdown-value" id="cdHoursValue">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <span class="countdown-sep" id="cdSep2">:</span>
+                <div class="countdown-unit" id="cdMinutesUnit">
+                    <span class="countdown-value" id="cdMinutesValue">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <span class="countdown-sep" id="cdSep3">:</span>
+                <div class="countdown-unit" id="cdSecondsUnit">
+                    <span class="countdown-value" id="cdSecondsValue">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <p class="countdown-done" id="countdownDone">They tied the knot</p>
+        </div>
+        <audio id="weddingMarch" src="Wedding_March.mp3"></audio>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
