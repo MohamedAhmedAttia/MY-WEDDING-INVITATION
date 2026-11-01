@@ -44,7 +44,7 @@ function submitCode() {
     container.classList.remove("hidden");
 
     if (!found) {
-        result.textContent = "you are not invited";
+        result.textContent = "Wrong Code!!!";
         result.classList.add("show");
         second.style.display = "none";
         third.style.display = "none";
